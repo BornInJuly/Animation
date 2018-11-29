@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.sky {
+    background-color:rgb(1, 7, 44);
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    z-index: -999;
+    overflow: hidden;
+}
+
+.ironman {
+    height: 180px;
+    width: 144px;
+    background: url(images/ironman.png) center center / contain no-repeat;
+    left: 500px;
+    top: 500px;
+    position: absolute;
+    animation: up 3.5s 1.5s forwards ease-out, updown 1.5s 4.6s infinite;
+    transition: 2s;
+}
+
+@keyframes up{
+    100% {
+        top: 50px;
+        left: 100px;
+    }
+}
+
+@keyframes updown {
+    0% {
+        top: 50px;
+        left: 100px;
+    }
+    50% {
+        top: 65px;
+        left: 115px;
+    }
+    100% {
+        top: 50px;
+        left: 100px;
+    }
+}
+
+.ironman:before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: url(images/fuell.png) center center / contain no-repeat;
+    bottom: -30px;
+    left: 91px;
+    transform: scale(1,-1) rotate(30deg);
+    animation: fire1 0.1s infinite;
+}
+
+@keyframes fire1{
+    25% {
+        transform: scale(1,-1) rotate(33deg);
+    }
+    50% {
+        transform: scale(1,-1) rotate(30deg);
+    }
+    75% {
+        transform: scale(1,-1) rotate(27deg);
+    }
+}
+
+.ironman:after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: url(images/fuell.png) center center / contain no-repeat;
+    bottom: -16px;
+    left: 68px;
+    transform: scale(1,-1) rotate(40deg);
+    z-index: -777;
+    animation: fire2 0.1s infinite;
+}
+
+@keyframes fire2{
+    25% {
+        transform: scale(1,-1) rotate(43deg);
+    }
+    50% {
+        transform: scale(1,-1) rotate(40deg);
+    }
+    75% {
+        transform: scale(1,-1) rotate(37deg);
+    }
+}
+
+.moon {
+    height: 100px;
+    width: 100px;
+    background: url(images/science-moon-png-29.png) center center / contain no-repeat;
+    right: 125px;
+    top: 25px;
+    position: absolute;
+    z-index: -888;
+}
+
+.cloud1 {
+    height: 100px;
+    width: 200px;
+    background: url(images/cloud1.png) center center / contain no-repeat;
+    right: -700px;
+    top: 55px;
+    position: absolute;
+    z-index: -777;
+    animation: cloud 16s infinite linear;
+}
+
+.cloud2 {
+    height: 60px;
+    width: 200px;
+    background: url(images/cloud2.png) center center / contain no-repeat;
+    right: -500px;
+    top: 15px;
+    position: absolute;
+    transform: scale(-1,-1);
+    z-index: -777;
+    animation: cloud 15s infinite linear;
+}
+
+.cloud3 {
+    height: 100px;
+    width: 200px;
+    background: url(images/cloud1.png) center center / contain no-repeat;
+    right: -300px;
+    top: 35px;
+    position: absolute;
+    z-index: -777;
+    animation: cloud 14s infinite linear;
+}
+
+@keyframes cloud{
+    100% {
+        right: 900px;
+    }
+}
+
+.stars {
+    background: url(images/star.png) center center / contain no-repeat;
+    position: absolute;
+    opacity: 0;
+}
+
+.star1 {
+    height: 50px;
+    width: 50px;
+    right: 200px;
+    top: 200px;
+    animation: shine 2s 1s forwards infinite ease-in-out;
+}
+
+.star2 {
+    height: 80px;
+    width: 80px;
+    right: 25px;
+    top: 150px;
+    animation: shine 2s 2s forwards infinite ease-in-out;
+}
+
+.star3 {
+    height: 80px;
+    width: 80px;
+    left: 20px;
+    top: 100px;
+    animation: shine 2s 3s forwards infinite ease-in-out;
+}
+
+.star4 {
+    height: 50px;
+    width: 50px;
+    left: 150px;
+    top: 250px;
+    animation: shine 2s 4s forwards infinite ease-in-out;
+}
+
+.star5 {
+    height: 60px;
+    width: 60px;
+    left: 300px;
+    top: 200px;
+    animation: shine 2s 5s forwards infinite ease-in-out;
+}
+
+.star6 {
+    height: 50px;
+    width: 50px;
+    left: 55px;
+    top: 350px;
+    animation: shine 2s 6s forwards infinite ease-in-out;
+}
+
+.star7 {
+    height: 60px;
+    width: 60px;
+    right: 50px;
+    top: 350px;
+    animation: shine 2s 7s forwards infinite ease-in-out;
+}
+
+@keyframes shine {
+    100% {
+        opacity: 1;
+    }
+}
+
+.city {
+    height: 450px;
+    width: 900px;
+    background: url(images/cityfinal.png) center center / cover no-repeat;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0px;
+    position: absolute;
+}
+
+
